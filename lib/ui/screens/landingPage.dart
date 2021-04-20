@@ -19,7 +19,7 @@ class _LandingPageState extends State<LandingPage> {
   List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     SearchScreen(),
-    BookmarkScreen(),
+    BookMarkScreen(),
   ];
 
   void _onItemTapped(int index) {

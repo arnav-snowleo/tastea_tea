@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "906854412100",
+    "firebase_url": "https://authen-7b6c8.firebaseio.com",
+    "project_id": "authen-7b6c8",
+    "storage_bucket": "authen-7b6c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906854412100:android:0b5b4a29f0bf7dfd41b111",
+        "android_client_info": {
+          "package_name": "com.arnav.tastea_tea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "906854412100-bqorlo6pfss07eke8u9rnbd9jtuvp2i1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arnav.tastea_tea",
+            "certificate_hash": "575e64ffb22d3630105b66472efe2bc60c49a5cc"
+          }
+        },
+        {
+          "client_id": "906854412100-j0dtnhk5pj8jl0siop8j3shu11a06hm5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtAkACE2YV2Bu_CscztYV0tqDx2XKbXvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "906854412100-j0dtnhk5pj8jl0siop8j3shu11a06hm5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

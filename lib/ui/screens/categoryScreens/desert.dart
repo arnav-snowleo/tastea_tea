@@ -3,19 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:tastea_tea/data/firestoreData.dart';
 
-class BookMarkScreen extends StatefulWidget {
+class DesertScreen extends StatefulWidget {
   @override
-  _BookMarkScreenState createState() => _BookMarkScreenState();
+  _DesertScreenState createState() => _DesertScreenState();
 }
 
-class _BookMarkScreenState extends State<BookMarkScreen> {
-//  CollectionReference ref = Firestore.instance.collection('recipe');
-
+class _DesertScreenState extends State<DesertScreen> {
   @override
   Widget build(BuildContext context) {
     return Flexible(
       child: StreamBuilder(
-        stream: beverageRef.snapshots(),
+        stream: desertRef.snapshots(),
         builder: (_, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (snapshot.hasData) {
             return ListView.builder(

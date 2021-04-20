@@ -8,6 +8,8 @@ import 'package:tastea_tea/ui/widgets/inputField.dart';
 import 'package:tastea_tea/ui/widgets/passwordField.dart';
 import 'package:tastea_tea/ui/widgets/roundButton.dart';
 
+import 'landingPage.dart';
+
 class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -88,7 +90,14 @@ class SignupScreen extends StatelessWidget {
                                 child: Text('Facebook'),
                               ),
                               RaisedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (_) => LandingPage(),
+                                    ),
+                                  );
+                                },
                                 shape: RoundedRectangleBorder(
                                     borderRadius:
                                         new BorderRadius.circular(10.0)),
