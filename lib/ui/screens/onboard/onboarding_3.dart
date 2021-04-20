@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tastea_tea/ui/screens/landingPage.dart';
+import 'package:tastea_tea/ui/screens/signupScreen.dart';
 
 class OnboardingScreenThree extends StatelessWidget {
   @override
@@ -14,7 +15,7 @@ class OnboardingScreenThree extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) => LandingPage(),
+                builder: (_) => SignupScreen(),
               ),
             );
           },

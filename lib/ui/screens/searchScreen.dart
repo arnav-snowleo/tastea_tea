@@ -1,8 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tastea_tea/ui/widgets/searchBar.dart';
+import 'package:tastea_tea/ui/widgets/stackedCircleTop.dart';
 
-class SearchScreen extends StatelessWidget {
+class SearchScreen extends StatefulWidget {
+  @override
+  _SearchScreenState createState() => _SearchScreenState();
+}
+
+class _SearchScreenState extends State<SearchScreen> {
+  double _currentSliderValue = 20;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,231 +44,11 @@ class SearchScreen extends StatelessWidget {
                     SizedBox(
                       width: 12,
                     ),
-                    Stack(
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            color: Color(0xFFc2cbe2),
-                            margin: const EdgeInsets.only(top: 20.0),
-                            child: SizedBox(
-                                height: 100.0,
-                                width: 100,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(top: 45.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Text(
-                                        "White tea",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                )),
-                          ),
-                        ),
-                        Positioned(
-                          top: .0,
-                          left: .0,
-                          right: .0,
-                          child: Center(
-                            child: CircleAvatar(
-                              radius: 35.0,
-                              child: Text("img"),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    Stack(
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            color: Color(0xFFc2cbe2),
-                            margin: const EdgeInsets.only(top: 20.0),
-                            child: SizedBox(
-                                height: 100.0,
-                                width: 100,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(top: 45.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Text(
-                                        "White tea",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                )),
-                          ),
-                        ),
-                        Positioned(
-                          top: .0,
-                          left: .0,
-                          right: .0,
-                          child: Center(
-                            child: CircleAvatar(
-                              radius: 35.0,
-                              child: Text("img"),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    Stack(
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            color: Color(0xFFc2cbe2),
-                            margin: const EdgeInsets.only(top: 20.0),
-                            child: SizedBox(
-                                height: 100.0,
-                                width: 100,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(top: 45.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Text(
-                                        "White tea",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                )),
-                          ),
-                        ),
-                        Positioned(
-                          top: .0,
-                          left: .0,
-                          right: .0,
-                          child: Center(
-                            child: CircleAvatar(
-                              radius: 35.0,
-                              child: Text("img"),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    Stack(
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            color: Color(0xFFc2cbe2),
-                            margin: const EdgeInsets.only(top: 20.0),
-                            child: SizedBox(
-                                height: 100.0,
-                                width: 100,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(top: 45.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Text(
-                                        "White tea",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                )),
-                          ),
-                        ),
-                        Positioned(
-                          top: .0,
-                          left: .0,
-                          right: .0,
-                          child: Center(
-                            child: CircleAvatar(
-                              radius: 35.0,
-                              child: Text("img"),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    Stack(
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            color: Color(0xFFc2cbe2),
-                            margin: const EdgeInsets.only(top: 20.0),
-                            child: SizedBox(
-                                height: 100.0,
-                                width: 100,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(top: 45.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Text(
-                                        "White tea",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                )),
-                          ),
-                        ),
-                        Positioned(
-                          top: .0,
-                          left: .0,
-                          right: .0,
-                          child: Center(
-                            child: CircleAvatar(
-                              radius: 35.0,
-                              child: Text("img"),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
+                    StackedCircleTop(),
+                    StackedCircleTop(),
+                    StackedCircleTop(),
+                    StackedCircleTop(),
+                    StackedCircleTop(),
                   ],
                 ),
               ),
@@ -332,6 +120,22 @@ class SearchScreen extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
+              ),
+              Slider(
+                activeColor: Colors.white,
+                inactiveColor: Colors.transparent,
+                value: _currentSliderValue,
+                min: 0,
+                max: 100,
+                divisions: 100,
+                label: _currentSliderValue.round().toString(),
+                onChanged: (double value) {
+                  setState(
+                    () {
+                      _currentSliderValue = value;
+                    },
+                  );
+                },
               ),
             ],
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tastea_tea/ui/widgets/searchBar.dart';
+import 'package:tastea_tea/ui/widgets/stackedCards.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -10,6 +11,32 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SearchBar(),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: <Widget>[
+                  SizedBox(
+                    width: 20,
+                  ),
+                  StackedCards(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  StackedCards(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  StackedCards(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  StackedCards(),
+                  SizedBox(
+                    width: 20,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

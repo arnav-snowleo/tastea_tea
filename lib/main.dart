@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tastea_tea/ui/screens/homeScreen.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tastea_tea/ui/screens/landingPage.dart';
+
 import 'package:tastea_tea/ui/screens/onboard/onboarding_1.dart';
+import 'package:tastea_tea/ui/screens/signupScreen.dart';
 
 int initScreen;
 
@@ -30,10 +30,10 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       initialRoute:
-          initScreen == 0 || initScreen == null ? 'onboard' : 'landing',
+          initScreen == 0 || initScreen == null ? 'onboard' : 'signup',
       routes: {
         'onboard': (context) => OnboardingScreenOne(),
-        'landing': (context) => LandingPage(),
+        'signup': (context) => SignupScreen(),
       },
     );
   }

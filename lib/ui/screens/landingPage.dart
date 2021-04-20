@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tastea_tea/ui/screens/homeScreen.dart';
 
-import 'package:tastea_tea/ui/widgets/searchBar.dart';
-
 import 'searchScreen.dart';
 import 'bookmarkScreen.dart';
 
@@ -17,8 +15,7 @@ class LandingPage extends StatefulWidget {
 /// This is the private State class that goes with MyStatefulWidget.
 class _LandingPageState extends State<LandingPage> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+
   List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     SearchScreen(),
