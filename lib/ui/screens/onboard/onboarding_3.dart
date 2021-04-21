@@ -7,6 +7,7 @@ class OnboardingScreenThree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: Text('OnboardingScreenThree'),
       ),
       body: Container(

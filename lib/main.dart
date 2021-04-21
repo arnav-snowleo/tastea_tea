@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:tastea_tea/ui/screens/onboard/onboarding_1.dart';
+import 'package:tastea_tea/ui/screens/onboard/onboarding_2.dart';
 import 'package:tastea_tea/ui/screens/signupScreen.dart';
 
 int initScreen;
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
       initialRoute:
           initScreen == 0 || initScreen == null ? 'onboard' : 'signup',
       routes: {
-        'onboard': (context) => OnboardingScreenOne(),
+        'onboard': (context) => OnboardingScreenTwo(),
         'signup': (context) => SignupScreen(),
       },
     );

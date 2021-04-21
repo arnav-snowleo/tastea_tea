@@ -101,6 +101,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
+                              widthgap,
                               RaisedButton(
                                 onPressed: () {},
                                 shape: RoundedRectangleBorder(
@@ -133,6 +134,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 textColor: Colors.black,
                                 child: Text('Google'),
                               ),
+                              widthgap,
                             ],
                           ),
                         ],

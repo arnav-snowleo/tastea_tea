@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tastea_tea/ui/screens/categoryScreens/desert.dart';
 import 'package:tastea_tea/ui/widgets/searchBar.dart';
 import 'package:tastea_tea/ui/widgets/stackedCards.dart';
 
@@ -17,16 +18,6 @@ class HomeScreen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: <Widget>[
-                  RaisedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => BeverageScreen(),
-                        ),
-                      );
-                    },
-                  ),
                   SizedBox(
                     width: 20,
                   ),

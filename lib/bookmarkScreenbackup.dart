@@ -121,140 +121,168 @@ class BookmarkScreened extends StatelessWidget {
 }
 
 /*
-Row(
+
+beverage backup
+import 'package:flutter/material.dart';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:tastea_tea/data/firestoreData.dart';
+import 'package:tastea_tea/ui/theme/constants.dart';
+
+class BeverageScreen extends StatefulWidget {
+  @override
+  _BeverageScreenState createState() => _BeverageScreenState();
+}
+
+class _BeverageScreenState extends State<BeverageScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: StreamBuilder(
+        stream: beverageRef.snapshots(),
+        builder: (_, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (snapshot.hasData) {
+            return ListView.builder(
+              itemCount: snapshot.data.documents.length,
+              itemBuilder: (context, index) {
+                // doc['details'] is where we fetch dynamic links from
+                var doc = snapshot.data.documents[index].data;
+
+                return Row(
+                  children: <Widget>[
+                    widthgap,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      color: Color(0xFFc2cbe2),
+                      margin: const EdgeInsets.only(
+                        top: 5.0,
+                        right: 35,
+                      ),
+                      child: SizedBox(
+                          height: 140.0,
+                          width: 140.0,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 45.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                widthgap,
-                                Column(
-                                  children: <Widget>[
-                                    Card(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                      color: Color(0xFF97af8f),
-                                      margin: const EdgeInsets.only(top: 20.0),
-                                      child: SizedBox(
-                                          height: 250.0,
-                                          width: 200,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                                top: 45.0),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: <Widget>[
-                                                SizedBox(
-                                                  height: 100,
-                                                ),
-                                                Text(
-                                                  "The best matcha cookie ever made",
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  height: 20,
-                                                ),
-                                                Text(
-                                                  "rectangular button here",
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          )),
-                                    ),
-                                    Text(
-                                      "● " + doc['title'],
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Text(
-                                      "● " + doc['contributed'],
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Text(
-                                      "★ " + doc['stars'],
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
+                                SizedBox(
+                                  height: 20,
                                 ),
-                                Column(
-                                  children: <Widget>[
-                                    Card(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                      color: Color(0xFF97af8f),
-                                      margin: const EdgeInsets.only(top: 20.0),
-                                      child: SizedBox(
-                                          height: 250.0,
-                                          width: 200,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                                top: 45.0),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: <Widget>[
-                                                SizedBox(
-                                                  height: 100,
-                                                ),
-                                                Text(
-                                                  "The best matcha cookie ever made",
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  height: 20,
-                                                ),
-                                                Text(
-                                                  "rectangular button here",
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          )),
-                                    ),
-                                    Text(
-                                      "● " + doc['title'],
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Text(
-                                      "● " + doc['contributed'],
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Text(
-                                      "★ " + doc['stars'],
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
+                                Text(
+                                  "image here",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
                                 ),
-                                widthgap,
+                                smallheightgap,
+                                smallheightgap,
                               ],
                             ),
+                          )),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          "● " + doc['title'],
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "● " + doc['contributed'],
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "★ " + doc['stars'],
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    widthgap,
+                  ],
+                );
+              },
+            );
+          } else
+            return Text('No data in Database');
+        }, // snapshot is the listener
+      ),
+    );
+  }
+}
+
+ */
+
+/*
+Column(
+                          children: <Widget>[
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              color: Color(0xFFc2cbe2),
+                              margin: const EdgeInsets.only(
+                                top: 5.0,
+                                right: 35,
+                              ),
+                              child: SizedBox(
+                                  height: 140.0,
+                                  width: 140.0,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(top: 45.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: <Widget>[
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Text(
+                                          "image here",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  )),
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "● " + doc['title'],
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "● " + doc['contributed'],
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "★ " + doc['stars'],
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            smallheightgap,
+                          ],
+                        ),
  */

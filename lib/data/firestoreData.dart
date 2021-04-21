@@ -16,3 +16,8 @@ CollectionReference fastfoodRef = Firestore.instance
     .collection('recipes')
     .document('categories')
     .collection('fastfood');
+
+CollectionReference bookmarkRef = Firestore.instance
+    .collection('recipes')
+    .document('bookmarks')
+    .collection('defaultCollection');
