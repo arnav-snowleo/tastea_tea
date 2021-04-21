@@ -9,7 +9,7 @@ class RoundButton extends StatelessWidget {
     this.text,
     this.press,
     this.color,
-    this.textColor = Colors.white,
+    this.textColor,
   }) : super(key: key);
 
   @override
@@ -17,7 +17,7 @@ class RoundButton extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
-      width: size.width * 0.8,
+      width: size.width * 1.0,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
         child: FlatButton(

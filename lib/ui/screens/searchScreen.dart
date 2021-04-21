@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tastea_tea/ui/theme/constants.dart';
+import 'package:tastea_tea/ui/widgets/roundButton.dart';
 import 'package:tastea_tea/ui/widgets/searchBar.dart';
 import 'package:tastea_tea/ui/widgets/stackedCircleTop.dart';
 
@@ -14,7 +16,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF97af8f),
+      backgroundColor: kLightGreenColor,
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -25,7 +27,9 @@ class _SearchScreenState extends State<SearchScreen> {
                 child: Text(
                   'Search Recipe',
                   style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30),
                 ),
               ),
               SearchBar(),
@@ -34,7 +38,9 @@ class _SearchScreenState extends State<SearchScreen> {
                 child: Text(
                   'Choose types of tea',
                   style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
                 ),
               ),
               SingleChildScrollView(
@@ -57,7 +63,9 @@ class _SearchScreenState extends State<SearchScreen> {
                 child: Text(
                   'What dish are you making?',
                   style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15),
                 ),
               ),
               Row(
@@ -118,7 +126,9 @@ class _SearchScreenState extends State<SearchScreen> {
                 child: Text(
                   'Difficulty Level',
                   style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15),
                 ),
               ),
               Slider(
@@ -136,6 +146,15 @@ class _SearchScreenState extends State<SearchScreen> {
                     },
                   );
                 },
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: RoundButton(
+                  color: kWhite,
+                  textColor: kLightGreenColor,
+                  text: "See result",
+                  press: () {},
+                ),
               ),
             ],
           ),

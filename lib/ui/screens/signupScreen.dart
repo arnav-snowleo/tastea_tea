@@ -81,6 +81,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                           RoundButton(
                             color: kLightGreenColor,
+                            textColor: kPrimaryLightColor,
                             text: "SIGNUP",
                             press: () {},
                           ),
