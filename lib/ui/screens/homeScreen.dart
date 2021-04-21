@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tastea_tea/ui/widgets/searchBar.dart';
 import 'package:tastea_tea/ui/widgets/stackedCards.dart';
 
+import 'categoryScreens/beverage.dart';
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,6 +17,16 @@ class HomeScreen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: <Widget>[
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => BeverageScreen(),
+                        ),
+                      );
+                    },
+                  ),
                   SizedBox(
                     width: 20,
                   ),

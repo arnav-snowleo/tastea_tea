@@ -12,3 +12,7 @@ const SizedBox bigheightgap = SizedBox(
 const SizedBox smallheightgap = SizedBox(
   height: 20,
 );
+
+const SizedBox widthgap = SizedBox(
+  width: 20,
+);

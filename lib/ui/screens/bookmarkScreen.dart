@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:tastea_tea/auth/googleAuth.dart';
 import 'package:tastea_tea/data/firestoreData.dart';
+
+import 'package:google_sign_in/google_sign_in.dart';
 
 class BookMarkScreen extends StatefulWidget {
   @override
@@ -9,7 +12,16 @@ class BookMarkScreen extends StatefulWidget {
 }
 
 class _BookMarkScreenState extends State<BookMarkScreen> {
-//  CollectionReference ref = Firestore.instance.collection('recipe');
+  bool _isLoggedIn = false;
+
+  GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
+
+  _logout() {
+    _googleSignIn.signOut();
+    setState(() {
+      _isLoggedIn = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,19 +43,34 @@ class _BookMarkScreenState extends State<BookMarkScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          SizedBox(
-                            height: 1,
-                          ),
-                          Container(
-                            height: 18,
-                            child: Text(
-                              "● " + doc['title'],
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
+//                          Text('hi'),
+//                          Text("hi," + _googleSignIn.currentUser.displayName),
+//                            Image.network(
+//                              _googleSignIn.currentUser.photoUrl,
+//                              height: 120.0,
+//                              width: 120.0,
+//                            ),
+
+//                          FlatButton(
+//                            child: Text("Logout google"),
+//                            onPressed: () {
+//                              _logout();
+//                            },
+//                          ),
+
+//                          SizedBox(
+//                            height: 1,
+//                          ),
+//                          Container(
+//                            height: 18,
+//                            child: Text(
+//                              "● " + doc['title'],
+//                              style: TextStyle(
+//                                color: Colors.black,
+//                                fontWeight: FontWeight.bold,
+//                              ),
+//                            ),
+//                          ),
                         ],
                       ),
                     ),

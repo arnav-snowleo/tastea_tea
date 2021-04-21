@@ -1,16 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:tastea_tea/auth/googleAuth.dart';
 
 import 'package:tastea_tea/ui/components/signupComponents/haveAccount.dart';
 import 'package:tastea_tea/ui/components/signupComponents/orDivider.dart';
 import 'package:tastea_tea/ui/screens/homeScreen.dart';
+import 'package:tastea_tea/ui/screens/landingPage.dart';
 import 'package:tastea_tea/ui/theme/constants.dart';
 import 'package:tastea_tea/ui/widgets/inputField.dart';
 import 'package:tastea_tea/ui/widgets/passwordField.dart';
 import 'package:tastea_tea/ui/widgets/roundButton.dart';
 
-import 'landingPage.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
-class SignupScreen extends StatelessWidget {
+class SignupScreen extends StatefulWidget {
+  @override
+  _SignupScreenState createState() => _SignupScreenState();
+}
+
+class _SignupScreenState extends State<SignupScreen> {
+//  bool _isLoggedIn = false;
+//
+//  GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
+//
+//  _login() async {
+//    try {
+//      await _googleSignIn.signIn();
+//      setState(() {
+//        _isLoggedIn = true;
+//      });
+//    } catch (err) {
+//      print(err);
+//    }
+//  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +112,12 @@ class SignupScreen extends StatelessWidget {
                                 child: Text('Facebook'),
                               ),
                               RaisedButton(
-                                onPressed: () {
+                                onPressed: () async {
+                                  bool res =
+                                      await AuthProvider().loginWithGoogle();
+                                  if (!res)
+                                    print("error logging in with google");
+
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
