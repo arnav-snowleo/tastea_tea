@@ -26,4 +26,4 @@ tea app ui + google auth + firestore data fetch
 
 *This mixin only supports vending a single ticker. If you might have multiple AnimationController objects over the lifetime of the State, use a full TickerProviderStateMixin instead.
 
-## {Mixins](https://medium.com/flutter-community/dart-what-are-mixins-3a72344011f3)
+## [Mixins](https://medium.com/flutter-community/dart-what-are-mixins-3a72344011f3)
