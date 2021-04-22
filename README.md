@@ -2,4 +2,3 @@
 
 tea app ui + google auth + firestore data fetch
 
-firestore image
