@@ -16,7 +16,7 @@ class _DesertScreenState extends State<DesertScreen> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          color: kLighterGreenColor,
+          color: kWhite,
           child: Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Column(

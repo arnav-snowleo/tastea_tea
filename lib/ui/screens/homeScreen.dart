@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tastea_tea/bookmarkScreenbackup.dart';
+import 'package:tastea_tea/newTabBar.dart';
 import 'package:tastea_tea/profilePhotoFetch_try.dart';
 import 'package:tastea_tea/ui/screens/signupScreen.dart';
 
@@ -24,49 +25,35 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: kWhite,
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            smallheightgap,
-            SearchBar(),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, top: 15, bottom: 5),
-              child: Text(
-                'Hi, tea lover.',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              smallheightgap,
+              SearchBar(),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, top: 15, bottom: 5),
+                child: Text(
+                  'Hi, tea lover.',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20.0, bottom: 20),
-              child: Text(
-                'Check our recommendations for you!',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0, bottom: 20),
+                child: Text(
+                  'Check our recommendations for you!',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            ),
-            StackedCardsCarousel(),
-            Padding(
-              padding: const EdgeInsets.all(40.0),
-              child: RoundButton(
-                color: kLighterGreenColor,
-                textColor: kWhite,
-                text: "Explore More Categories",
-                press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => BookmarkScreened(),
-                    ),
-                  );
-                },
-              ),
-            ),
-          ],
+              MyTabBar(),
+            ],
+          ),
         ),
       ),
     );

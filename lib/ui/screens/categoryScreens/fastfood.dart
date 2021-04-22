@@ -14,7 +14,7 @@ class _FastfoodScreenState extends State<FastfoodScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: kLighterGreenColor,
+      color: kWhite,
       child: Padding(
         padding: const EdgeInsets.only(left: 20.0),
         child: Column(

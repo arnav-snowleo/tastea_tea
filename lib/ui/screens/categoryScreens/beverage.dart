@@ -16,7 +16,7 @@ class _BeverageScreenState extends State<BeverageScreen> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          color: kLighterGreenColor,
+          color: kWhite,
           child: Padding(
             padding: const EdgeInsets.only(left: 20.0),
             child: Column(

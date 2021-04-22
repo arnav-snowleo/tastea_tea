@@ -9,7 +9,6 @@ class StackedCardsCarousel extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
-          smallwidthgap,
           StackedCards(),
           smallwidthgap,
           StackedCards(),
