@@ -16,9 +16,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool _isLoggedIn = true;
-
-  GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
+ 
 
   @override
   Widget build(BuildContext context) {
