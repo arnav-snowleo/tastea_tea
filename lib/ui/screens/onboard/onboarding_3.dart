@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tastea_tea/ui/screens/landingPage.dart';
+
 import 'package:tastea_tea/ui/screens/signupScreen.dart';
 import 'package:tastea_tea/ui/theme/constants.dart';
+import 'package:tastea_tea/ui/widgets/roundButton.dart';
 
 class OnboardingScreenThree extends StatelessWidget {
   @override
@@ -36,7 +37,7 @@ class OnboardingScreenThree extends StatelessWidget {
             smallheightgap,
             Container(
               child: Text(
-                'From brewing the classic tea to whipping up cozy matcha \n lattes - our tutorials will have you seeping \n your favourite tea like a pro-in no time!',
+                'From brewing the classic tea to whipping up cozy matcha lattes - our tutorials will have you seeping your favourite tea like a pro-in no time!',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
@@ -44,8 +45,11 @@ class OnboardingScreenThree extends StatelessWidget {
               ),
             ),
             smallheightgap,
-            RaisedButton(
-              onPressed: () {
+            RoundButton(
+              color: kLightGrey,
+              textColor: kBlack,
+              text: "Continue",
+              press: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -53,7 +57,6 @@ class OnboardingScreenThree extends StatelessWidget {
                   ),
                 );
               },
-              child: Text('Continue'),
             ),
             bigheightgap,
           ],

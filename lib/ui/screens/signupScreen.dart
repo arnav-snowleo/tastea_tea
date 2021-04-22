@@ -18,20 +18,33 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
-//  bool _isLoggedIn = false;
-//
-//  GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
-//
-//  _login() async {
-//    try {
-//      await _googleSignIn.signIn();
-//      setState(() {
-//        _isLoggedIn = true;
-//      });
-//    } catch (err) {
-//      print(err);
-//    }
-//  }
+  bool _isLoggedIn = false;
+
+  GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
+
+  _login() async {
+    try {
+      await _googleSignIn.signIn();
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => LandingPage(),
+        ),
+      );
+      setState(() {
+        _isLoggedIn = true;
+      });
+    } catch (err) {
+      print(err);
+    }
+  }
+
+  _logout() {
+    _googleSignIn.signOut();
+    setState(() {
+      _isLoggedIn = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +115,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
-                              widthgap,
+                              smallwidthgap,
                               RaisedButton(
                                 onPressed: () {},
                                 shape: RoundedRectangleBorder(
@@ -135,7 +148,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 textColor: Colors.black,
                                 child: Text('Google'),
                               ),
-                              widthgap,
+                              smallwidthgap,
                             ],
                           ),
                         ],

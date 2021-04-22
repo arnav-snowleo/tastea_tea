@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tastea_tea/ui/theme/constants.dart';
 
 class SearchBar extends StatelessWidget {
   @override
@@ -16,17 +17,17 @@ class SearchBar extends StatelessWidget {
           hintText: 'Search here',
           hintStyle: TextStyle(color: Colors.grey),
           filled: true,
-          fillColor: Color(0xFFe6e5e6),
+          fillColor: kLightGrey,
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
             borderSide: BorderSide(
-              color: Color(0xFFe6e5e6),
+              color: kLightGrey,
             ),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
             borderSide: BorderSide(
-              color: Color(0xFFe6e5e6),
+              color: kLightGrey,
             ),
           ),
         ),

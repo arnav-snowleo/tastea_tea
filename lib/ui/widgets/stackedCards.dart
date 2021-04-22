@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tastea_tea/ui/theme/constants.dart';
 
 class StackedCards extends StatelessWidget {
   @override
@@ -58,7 +59,31 @@ class StackedCards extends StatelessWidget {
                 top: 5.0,
                 right: 35,
               ),
-              child: SizedBox(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: kBlack,
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: Image.asset(
+                    'assets/images/matchaBrew.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                height: 150,
+                width: 190,
+              ),
+            ),
+          ),
+        )
+      ],
+    );
+  }
+}
+
+/*
+SizedBox(
                   height: 150.0,
                   width: 190.0,
                   child: Padding(
@@ -78,10 +103,4 @@ class StackedCards extends StatelessWidget {
                       ],
                     ),
                   )),
-            ),
-          ),
-        )
-      ],
-    );
-  }
-}
+ */

@@ -17,7 +17,7 @@ class StackedCardsCarousel extends StatelessWidget {
           StackedCards(),
           smallwidthgap,
           StackedCards(),
-          widthgap,
+          smallwidthgap,
         ],
       ),
     );
